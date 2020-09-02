@@ -1,0 +1,22 @@
+{
+"Atalanta": {"B" : ["Juventus", "Napoli", "Inter"], "M" : ["Milan", "Roma", "Torino"]}, 
+"Bologna": {"B" : ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria"], "M" : ["Udinese", "SPAL", "Sassuolo", "Fiorentina"] }, 
+"Brescia": {"B" : ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria", "Bologna", "Sassuolo", "Udinese", "SPAL", "Parma", "Cagliari", "Fiorentina", "Genoa"], "M" : ["Lecce", "Verona"]}, 
+"Cagliari": {"B" :["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria", "Bologna", "Sassuolo", "Udinese"], "M" : ["Parma", "SPAL"]}, 
+"Fiorentina": {"B" : ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria", "Bologna", "Sassuolo", "Parma", "Cagliari"], "M" : ["SPAL", "Udinese"]}, 
+"Genoa": {"B" : ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria", "Bologna", "Sassuolo", "Udinese", "SPAL", "Parma", "Cagliari"], "M" : ["Fiorentina", "Brescia", "Lecce"]}, 
+"Verona": {"B" : ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria", "Bologna", "Sassuolo", "Udinese", "SPAL", "Parma", "Cagliari", "Fiorentina", "Genoa", "Brescia", "Lecce"], "M" : []}, 
+"Inter": {"B" : ["Juventus", "Napoli", "Atalanta", "Milan", "Roma"], "M" : ["Torino", "Lazio"]}, 
+"Juventus": {"B" : ["Napoli", "Atalanta","Roma", "Torino", "Inter"], "M" : ["Milan", "Lazio"]}, 
+"Lazio": {"B" : ["Juventus", "Napoli", "Atalanta", "Inter", "Roma", "Torino"], "M" : ["Sampdoria"]},  
+"Lecce": {"B" : ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria", "Bologna", "Sassuolo", "Udinese", "SPAL", "Parma", "Cagliari", "Fiorentina", "Genoa", "Brescia"], "M" : ["Verona"]}, 
+"Milan": {"B": ["Juventus", "Napoli", "Atalanta", "Inter", "Roma"], "M": ["Torino", "Lazio", "Sampdoria"]}, 
+"Napoli": {"B": ["Juventus", "Inter", "Roma", "Atalanta", "Milan"], "M": ["Torino", "Lazio", "Milan", "Sampdoria"]}, 
+"Parma": {"B": ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria", "Bologna", "Sassuolo"], "M": ["SPAL", "Udinese"]}, 
+"Roma": {"B": ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Lazio"], "M": ["Torino", "Sampdoria", "Sassuolo"]}, 
+"Sampdoria": {"B": ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio"], "M": ["Sassuolo"]}, 
+"Sassuolo": {"B": ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria"], "M": ["Bologna"]}, 
+"SPAL": {"B": ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria", "Bologna", "Sassuolo"], "M": ["Udinese"]}, 
+"Torino": {"B": ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Lazio"], "M": ["Sassuolo", "Sampdoria"]}, 
+"Udinese": {"B": ["Juventus", "Napoli", "Atalanta", "Inter", "Milan", "Roma", "Torino", "Lazio", "Sampdoria", "Sassuolo"], "M": ["Bologna"]}
+}
