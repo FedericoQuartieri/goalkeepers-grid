@@ -15,7 +15,7 @@
 					"Cagliari Lazio",
 					"Crotone Milan",
 					"Inter Fiorentina",
-					"Napoli Genova",
+					"Napoli Genoa",
 					"Roma Juventus",
 					"Sampdoria Benevento",
 					"Spezia Sassuolo",
@@ -26,7 +26,7 @@
 	"giornata_3" :	["Atalanta Cagliari",
 					"Benevento Bologna",
 					"Fiorentina Sampdoria",
-					"Genova Torino",
+					"Genoa Torino",
 					"Juventus Napoli",
 					"Lazio Inter",
 					"Milan Spezia",
@@ -90,7 +90,7 @@
 
 
 
-	"giornata_8" :	["Crotone  Lazio",
+	"giornata_8" :	["Crotone Lazio",
 					"Fiorentina Benevento",
 					"Inter Torino",
 					"Juventus Cagliari",

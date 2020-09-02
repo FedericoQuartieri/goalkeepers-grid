@@ -7,7 +7,6 @@ with open('fanta_squadreA_modify.json') as json_file:
     squadre_interm = json.load(json_file) 
 squadreA = squadre_interm["squadreA"]
 
-print(squadreA, '\n')
 
 
 squadre = {}
@@ -23,10 +22,15 @@ for i in range(len(chiavi)):
 	for j in range(len(a)):
 		b = a[j].split(" ")
 		c.append(b)
-	a = c 
+		print(c)
+	a = c
+	#print(a)
+	#print(squadre)
 	for e in a:
 		d = squadre[e[0]]
+		#print(d)
 		d.append(e[1])
+		#print(d)
 		squadre[e[0]] = d
 	for x in a:
 		d = squadre[x[1]]

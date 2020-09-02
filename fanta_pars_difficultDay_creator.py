@@ -20,7 +20,7 @@ bigD = {}
 
 
 for e in squadreA:
-	bigD[e] = []
+	bigD[e] = [[],[]]
 
 
 
@@ -30,15 +30,23 @@ for e in dicto:
 	a = dicto[e]
 	g = big[e]["B"]
 	m = big[e]["M"]
-	for j in m:
-		g.append(j)
-	b = []
+	bignumber = []
+	mednumber = []
 	for x in a:
 		for y in g:
 			if x == y:
-				b = bigD[e]
-				b.append(c)
-		bigD[e] = b
+				bignumber = bigD[e][0]
+				print(bigD)
+				bignumber.append(c)
+		final = [bignumber,bigD[e][1]]
+		bigD[e] = final
+		for y in m:
+			if x == y:
+				mednumber = bigD[e][1]
+				print(bigD)
+				mednumber.append(c)
+		final = [bigD[e][0],mednumber]
+		bigD[e] = final
 		c += 1
 	c = 1
 
