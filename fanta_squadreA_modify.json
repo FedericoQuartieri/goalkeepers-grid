@@ -1,27 +1,24 @@
-{
-"squadreA" : 
+{"squadreA" : 
 			[
-				"Atalanta",
+				"Atalanta", 
+				"Benevento", 
 				"Bologna",
-				"Brescia"
 				"Cagliari",
+				"Crotone",
 				"Fiorentina", 
 				"Genoa",
 			 	"Verona",
 				"Inter",
 			    "Juventus",
 			    "Lazio",
-			    "Lecce", 
 			    "Milan",
 				"Napoli",
 			    "Parma",
 				"Roma", 
 				"Sampdoria",
 				"Sassuolo",
-				"Spal",
+				"Spezia",
 			    "Torino",
 			    "Udinese",
 			] 
-
-
 }

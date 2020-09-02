@@ -3,24 +3,24 @@
 {"classifica" : 
 				[
 					"Juventus",
-					"Napoli",
-					"Atalanta",
 					"Inter",
-					"Milan",	
+					"Atalanta",
+					"Lazio"
 					"Roma",	
-					"Torino",
-					"Lazio",
-					"Sampdoria",
-					"Bologna",
-					"Sassuolo",	
-					"Udinese",
-					"SPAL",
+					"Milan",
+					"Napoli",
+					"Sassuolo",
+					"Fiorentina",
 					"Parma",
+					"Verona",
+					"Bologna",
 					"Cagliari",
-					"Fiorentina",	
+					"Udinese",
+					"Sampdoria",
+					"Torino",
 					"Genoa",
-					"Brescia", 
 					"Lecce",
-					"Verona" 
+					"Brescia", 
+					"SPAL",
 				]
 }

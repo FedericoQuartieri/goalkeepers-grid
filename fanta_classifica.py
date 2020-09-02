@@ -1,8 +1,8 @@
 import json
 import os
-with open('fanta_squadreA_modify.json') as json_file:  
+'''with open('fanta_squadreA_modify.json') as json_file:  
     squadre = json.load(json_file)
-    squadreA = squadre["squadreA"]
+    squadreA = squadre["squadreA"]'''
 
 
 with open('fanta_classifica_modify.json') as json_file:  
