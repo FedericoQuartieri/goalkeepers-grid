@@ -1,37 +1,80 @@
 import json
-with open('fanta_bigD.json') as json_file:  
-    bigD = json.load(json_file)
+with open('fanta_calendar_modify.json') as json_file:  
+    dicto = json.load(json_file)
 
-'''
-					"Juventus",
-					"Napoli",
-					"Atalanta",
-					"Inter",
-					"Milan",	
-					"Roma",	
-					"Torino",
-					"Lazio",
-					"Sampdoria",
-					"Bologna",
-					"Sassuolo",	
-					"Udinese",
-					"SPAL",
-					"Parma",
-					"Cagliari",
-					"Fiorentina",	
-					"Genoa",
-					"Brescia", 
-					"Lecce",
-					"Verona" 
-'''
+with open('fanta_squadreA_modify.json') as json_file:  
+    squadre_interm = json.load(json_file) 
+squadreA = squadre_interm["squadreA"]
 
+squadre = {}
+for e in squadreA:
+	squadre[e] = []
 
+chiavi = dicto.keys()
+
+for i in range(len(chiavi)):
+	a = dicto['giornata_{}'.format(i+1)]
+	c = []
+	for j in range(len(a)):
+		b = a[j].split(" ")
+		c.append(b)
+		#print(c)
+	a = c
+	#print(a)
+	#print(squadre)
+	for e in a:
+		d = squadre[e[0]]
+		#print(d)
+		d.append(e[1])
+		#print(d)
+		squadre[e[0]] = d
+	for x in a:
+		d = squadre[x[1]]
+		d.append(x[0])
+		squadre[x[1]] = d
+
+dicto = squadre
+
+with open('fanta_big.json') as json_file:  
+    big = json.load(json_file)
+
+bigD = {}
+
+for e in squadreA:
+	bigD[e] = [[],[]]
+
+c = 1
+
+for e in dicto:
+	a = dicto[e]
+	g = big[e]["B"]
+	m = big[e]["M"]
+	bignumber = []
+	mednumber = []
+	for x in a:
+		for y in g:
+			if x == y:
+				bignumber = bigD[e][0]
+				#print(bigD)
+				bignumber.append(c)
+		final = [bignumber,bigD[e][1]]
+		bigD[e] = final
+		for y in m:
+			if x == y:
+				mednumber = bigD[e][1]
+				#print(bigD)
+				mednumber.append(c)
+		final = [bigD[e][0],mednumber]
+		bigD[e] = final
+		c += 1
+	c = 1
+
+#print(bigD)
 
 Fdicto = {}
 
 for e in bigD:
 	a = bigD[e]
-
 
 	for x in a[0]:
 		for y in bigD:
@@ -106,9 +149,7 @@ for e in bigD:
 					Fdicto["{} {}".format(e,y)] = c 
 				c = 0
 	
-
-print(Fdicto)
-
+#print(Fdicto)
 
 for e in bigD:
 	for y in bigD:
@@ -117,32 +158,21 @@ for e in bigD:
 			if k not in Fdicto:
 				Fdicto["{} {}".format(e,y)] = 0	
 
-
-
 Finale = {}
-	
 
+for i in range(6):
+	for e in Fdicto:
+		a = Fdicto[e]
+		if a == i:
+			Finale[e] = a 
+	with open('Output/Output_{}.json'.format(i), 'w') as outfile:  
+		json.dump(Finale, outfile)
 
-for e in Fdicto:
-	a = Fdicto[e]
-	if a == 6:
-		Finale[e] = a 
-
-
-print(Finale)
-
-
-
-
-with open('Output/Output_6.json', 'w') as outfile:  
-    json.dump(Finale, outfile)
-
-
-
-
-
-
-
-
-
-
+to_sort = {}
+for e in squadreA:
+	squadra = "Juventus"
+	a = squadra + " " + e
+	if a != squadra + " " + squadra:
+		to_sort[a] = Fdicto[a]
+sorted_final = sorted(to_sort.items(), key=lambda x: x[1])
+print(sorted_final)
