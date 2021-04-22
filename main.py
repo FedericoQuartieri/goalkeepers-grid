@@ -1,8 +1,8 @@
 import json
-with open('fanta_calendar_modify.json') as json_file:  
+with open('calendar_modify.json') as json_file:  
     dicto = json.load(json_file)
 
-with open('fanta_squadreA_modify.json') as json_file:  
+with open('teams_modify.json') as json_file:  
     squadre_interm = json.load(json_file) 
 squadreA = squadre_interm["squadreA"]
 
@@ -18,15 +18,10 @@ for i in range(len(chiavi)):
 	for j in range(len(a)):
 		b = a[j].split(" ")
 		c.append(b)
-		#print(c)
 	a = c
-	#print(a)
-	#print(squadre)
 	for e in a:
 		d = squadre[e[0]]
-		#print(d)
 		d.append(e[1])
-		#print(d)
 		squadre[e[0]] = d
 	for x in a:
 		d = squadre[x[1]]
@@ -35,7 +30,7 @@ for i in range(len(chiavi)):
 
 dicto = squadre
 
-with open('fanta_big.json') as json_file:  
+with open('big.json') as json_file:  
     big = json.load(json_file)
 
 bigD = {}
@@ -55,21 +50,17 @@ for e in dicto:
 		for y in g:
 			if x == y:
 				bignumber = bigD[e][0]
-				#print(bigD)
 				bignumber.append(c)
 		final = [bignumber,bigD[e][1]]
 		bigD[e] = final
 		for y in m:
 			if x == y:
 				mednumber = bigD[e][1]
-				#print(bigD)
 				mednumber.append(c)
 		final = [bigD[e][0],mednumber]
 		bigD[e] = final
 		c += 1
 	c = 1
-
-#print(bigD)
 
 Fdicto = {}
 
@@ -148,8 +139,7 @@ for e in bigD:
 					c += 1
 					Fdicto["{} {}".format(e,y)] = c 
 				c = 0
-	
-#print(Fdicto)
+
 
 for e in bigD:
 	for y in bigD:
@@ -158,9 +148,8 @@ for e in bigD:
 			if k not in Fdicto:
 				Fdicto["{} {}".format(e,y)] = 0	
 
-Finale = {}
-
-for i in range(6):
+for i in range(10):
+	Finale = {}
 	for e in Fdicto:
 		a = Fdicto[e]
 		if a == i:
@@ -168,11 +157,20 @@ for i in range(6):
 	with open('Output/Output_{}.json'.format(i), 'w') as outfile:  
 		json.dump(Finale, outfile)
 
-to_sort = {}
-for e in squadreA:
-	squadra = "Juventus"
-	a = squadra + " " + e
-	if a != squadra + " " + squadra:
-		to_sort[a] = Fdicto[a]
-sorted_final = sorted(to_sort.items(), key=lambda x: x[1])
-print(sorted_final)
+
+squadra = input("insert team or press enter ")
+if squadra not in squadreA and squadra != "":
+	squadra = ""
+	print("team not valid")
+
+if squadra != "":
+	to_sort = {}
+	for e in squadreA:
+		a = squadra + " " + e
+		if a != squadra + " " + squadra:
+			to_sort[a] = Fdicto[a]
+	sorted_final = sorted(to_sort.items(), key=lambda x: x[1])
+	with open('Output/team.json', 'w') as outfile:  
+		json.dump(sorted_final, outfile)
+
+print("Done!")

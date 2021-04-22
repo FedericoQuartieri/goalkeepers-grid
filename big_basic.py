@@ -1,11 +1,11 @@
 import json
 import os
-with open('fanta_squadreA_modify.json') as json_file:  
+with open('teams_modify.json') as json_file:  
     squadre = json.load(json_file)
     squadreA = squadre["squadreA"]
 
 
-with open('fanta_classifica_modify.json') as json_file:  
+with open('ranking_modify.json') as json_file:  
     classifica_interm = json.load(json_file)
     classifica1 = classifica_interm["classifica"]
 
@@ -29,7 +29,7 @@ for e in classifica:
 print(classifica, '\n')
 
 
-with open('fanta_big_base.json', 'w') as outfile:  
+with open('big_basic.json', 'w') as outfile:  
     json.dump(classifica, outfile)
 
 
